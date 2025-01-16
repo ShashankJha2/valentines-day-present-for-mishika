@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Final Statement</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4b0c3; /* Slightly different pink shade */
+            font-family: Arial, sans-serif;
+            overflow-y: auto;
+        }
+        .container {
+            width: 70%;
+            background-color: #fcd7e6;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+        }
+        h1 {
+            margin: 0 0 20px;
+            font-size: 36px;
+            color: #e20060; /* A deeper pink */
+            font-weight: bold;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            margin: 0 0 20px;
+        }
+        .message {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ff4f72;
+            display: none; /* Hidden initially */
+            opacity: 0; /* Hidden initially */
+            transition: opacity 1s ease-in-out; /* Fade-in transition */
+        }
+        .click-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff6f8d; /* Brighter pink */
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .click-btn:hover {
+            background-color: #ff3f64; /* Darker pink on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Final Statement</h1>
+        <p>So, Mishika, I have a really important question to ask you...</p>
+        
+        <!-- Button to trigger message -->
+        <button class="click-btn" onclick="showMessage()">Click me</button>
+
+        <!-- Hidden message that will appear on button click -->
+        <p class="message" id="valentineMessage">Will you be my valentine? 💖</p>
+    </div>
+
+    <script>
+        function showMessage() {
+            var message = document.getElementById("valentineMessage");
+            message.style.display = "block"; // Makes the message visible
+            setTimeout(function() {
+                message.style.opacity = 1; // Fades in the message
+            }, 100); // Small delay before fading in
+        }
+    </script>
+</body>
+</html>
